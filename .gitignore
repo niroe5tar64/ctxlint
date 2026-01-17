@@ -1,0 +1,45 @@
+# Cabal
+dist/
+dist-newstyle/
+*.hi
+*.o
+*.chi
+*.chs.h
+*.dyn_hi
+*.dyn_o
+cabal.project.local
+cabal.project.local~
+.ghc.environment.*
+
+# Stack
+.stack-work/
+stack.yaml.lock
+
+# GHCup
+.ghcup/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Haskell
+.hie/
+.cabal-sandbox/
+cabal.sandbox.config
+
+# Learning sandbox outputs
+learning/dist/
+learning/dist-newstyle/
+learning/.stack-work/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.bak

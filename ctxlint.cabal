@@ -1,0 +1,55 @@
+cabal-version:       3.0
+name:                 ctxlint
+version:              0.1.0.0
+synopsis:             Context Spec validation CLI
+description:
+  A CLI tool to structurally validate Context Spec (specification documents)
+  preventing ambiguous, incomplete, and broken designs from progressing.
+license:              MIT
+author:               ctxlint team
+maintainer:           ctxlint@example.com
+build-type:           Simple
+
+common warnings
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+
+library
+  import:              warnings
+  exposed-modules:
+    Ctxlint.Parser
+    Ctxlint.Validator
+    Ctxlint.Types
+  build-depends:
+    base >=4.16 && <5,
+    text,
+    parsec,
+    filepath
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+executable ctxlint
+  import:              warnings
+  main-is:             Main.hs
+  build-depends:
+    base >=4.16 && <5,
+    ctxlint,
+    text,
+    filepath
+  hs-source-dirs:      app
+  default-language:    Haskell2010
+
+test-suite ctxlint-test
+  import:              warnings
+  type:                exitcode-stdio-1.0
+  main-is:             Main.hs
+  build-depends:
+    base >=4.16 && <5,
+    ctxlint,
+    hspec
+  hs-source-dirs:      test
+  default-language:    Haskell2010
