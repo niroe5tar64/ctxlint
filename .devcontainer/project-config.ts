@@ -1,18 +1,15 @@
 /**
- * このプロジェクト固有のDevContainer設定
+ * ctxlint（Context Spec検証CLI）の開発環境設定
  *
  * base + (preset) + この設定 がマージされて
  * .devcontainer/devcontainer.json が生成されます
  *
- * preset を使用する場合は、ビルド時に引数で指定：
- *   bun run build node  # node preset を使用
+ * Haskell開発環境を含むpreset を使用する場合は、ビルド時に引数で指定：
+ *   npx @niroe5tar64/devcontainer init --preset haskell # haskell preset を使用
  */
 
 export const projectConfig = {
-  name: 'Shared DevContainer Development',
-
-  // このプロジェクト自身では .devcontainer/post-create.sh を参照
-  postCreateCommand: 'bash .devcontainer/post-create.sh',
+  name: 'ctxlint Development'
 };
 
 /**
@@ -20,5 +17,5 @@ export const projectConfig = {
  * （DevContainerConfig 型には含まれないが、JSON としては有効）
  */
 export const projectConfigMetadata = {
-  $comment: 'チーム共通DevContainer設定の開発環境',
+  $comment: 'ctxlint（Context Spec検証CLI）のHaskell開発環境',
 };
