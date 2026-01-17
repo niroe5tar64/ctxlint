@@ -1,0 +1,12 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:ctxlint"
+    - path: "./app"
+      component: "exe:ctxlint"
+    - path: "./test"
+      component: "test:ctxlint-test"
+    - path: "./learning"
+      component: "lib:sandbox"
+    - path: "./learning/app"
+      component: "exe:sandbox-exe"

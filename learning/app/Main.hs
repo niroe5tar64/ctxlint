@@ -20,11 +20,11 @@ main = do
   -- Test functions
   putStrLn "\n[Functions]"
   print $ double [1, 2, 3]
-  print $ applyTwice (+10) 5
+  print $ applyTwice (+10) (5 :: Integer)
   print $ filterPositive [-2, -1, 0, 1, 2]
   print $ product' [1, 2, 3, 4, 5]
 
   -- Test type classes
   putStrLn "\n[Type Classes]"
   printDescription (42 :: Int)
-  printDescription "Hello, Haskell!"
+  printDescription (Text "Hello, Haskell!")

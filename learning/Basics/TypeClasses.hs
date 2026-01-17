@@ -11,9 +11,12 @@ class Describable a where
 instance Describable Int where
   describe n = "This is the number: " ++ show n
 
--- String インスタンス
-instance Describable String where
-  describe s = "This is the text: " ++ s
+-- Text型を定義（String型シノニムの問題を回避するため）
+newtype Text = Text String
+
+-- Text インスタンス
+instance Describable Text where
+  describe (Text s) = "This is the text: " ++ s
 
 -- 型クラスを使う関数
 printDescription :: Describable a => a -> IO ()

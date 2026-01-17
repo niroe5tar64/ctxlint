@@ -43,3 +43,13 @@ Thumbs.db
 # Temporary
 *.tmp
 *.bak
+
+# Claude Code local overrides
+.claude/settings.local.json
+
+# Codex (local state)
+.codex/
+!.codex/skills/
+!.codex/skills/**
+.codex/skills/.system/
+

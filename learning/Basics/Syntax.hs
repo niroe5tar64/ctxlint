@@ -4,8 +4,8 @@
 module Basics.Syntax where
 
 -- 型宣言付き定数
-x :: Int
-x = 5
+myNumber :: Int
+myNumber = 5
 
 -- 型シグネチャ付き関数
 add :: Int -> Int -> Int
