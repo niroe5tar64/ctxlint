@@ -70,7 +70,7 @@
     "source=${localEnv:HOME}/.claude/todos,target=/home/dev-user/.claude/todos,type=bind",
     "source=${localEnv:HOME}/.codex,target=/home/dev-user/.codex,type=bind"
   ],
-  "postCreateCommand": "bash .devcontainer/post-create.sh && sudo apt-get install -y libgmp-dev && curl --proto \"=https\" --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_GHC_VERSION=9.8.4 BOOTSTRAP_HASKELL_CABAL_VERSION=3.12.1.0 BOOTSTRAP_HASKELL_INSTALL_STACK=1 BOOTSTRAP_HASKELL_INSTALL_HLS=1 sh",
+  "postCreateCommand": "bash .devcontainer/post-create.sh && sudo apt-get update && sudo apt-get install -y libgmp-dev && curl --proto \"=https\" --tlsv1.2 -sSf https://get-ghcup.haskell.org | BOOTSTRAP_HASKELL_NONINTERACTIVE=1 BOOTSTRAP_HASKELL_GHC_VERSION=9.8.4 BOOTSTRAP_HASKELL_CABAL_VERSION=3.12.1.0 BOOTSTRAP_HASKELL_INSTALL_STACK=1 BOOTSTRAP_HASKELL_INSTALL_HLS=1 sh",
   "remoteUser": "dev-user",
   "name": "ctxlint Development"
 }
