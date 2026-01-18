@@ -21,5 +21,21 @@ sumList :: [Int] -> Int
 sumList [] = 0
 sumList (x:xs) = x + sumList xs
 
--- 練習問題
--- TODO: 他の関数を実装してみる
+-- 演習問題
+
+-- 演習1: リストの長さを返す（Preludeのlengthを使わずに）
+myLength :: [a] -> Int
+myLength [] = 0
+myLength (_:xs) = 1 + myLength xs
+
+-- 演習2: リストを逆順にする（Preludeのreverseを使わずに）
+myReverse :: [a] -> [a]
+myReverse [] = []
+myReverse (x:xs) = myReverse xs ++ [x]
+
+-- 演習3: n番目の要素を取得
+-- 0-indexed で n 番目の要素を返す
+myNth :: [a] -> Int -> a
+myNth [] _ = error "Index out of bounds"
+myNth (x:_) 0 = x
+myNth (_:xs) n = myNth xs (n - 1)
